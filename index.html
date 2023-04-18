@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <script src="./moment-with-locales.js" defer></script>
+    <script src="./moment-precise-range.js" defer></script>
+    <script src="./index.js" defer></script>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./stylesheets/style.css" />
+    <title>Frontend Mentor | Age calculator app</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+
+  <body>
+    <main>
+      <div class="wrapper">
+        <div class="inputs">
+          <div class="day-input">
+            <label for="day">DAY</label>
+            <input type="text" id="day" placeholder="DD" />
+            <p class="empty-warning-text">This field is required</p>
+          </div>
+          <div>
+            <label for="month">MONTH</label>
+            <input type="text" id="month" placeholder="MM" />
+            <p class="empty-warning-text">This field is required</p>
+          </div>
+          <div>
+            <label for="year">YEAR</label>
+            <input type="text" id="year" placeholder="YYYY" />
+            <p class="empty-warning-text">This field is required</p>
+          </div>
+        </div>
+
+        <div class="button">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="170"
+            height="150"
+            viewBox="-20 -30 102 108"
+          >
+            <g fill="none" stroke="#FFF" stroke-width="2">
+              <path
+                d="M1 22.019C8.333 21.686 23 25.616 23 44M23 44V0M45 22.019C37.667 21.686 23 25.616 23 44"
+              />
+            </g>
+          </svg>
+        </div>
+
+        <div class="display">
+          <div class="year"><span class="number">- -</span> years</div>
+          <div class="month"><span class="number">- -</span> months</div>
+          <div class="day"><span class="number">- -</span> days</div>
+        </div>
+      </div>
+    </main>
+    <!-- Day
+  DD
+
+  Month
+  MM
+
+  Year
+  YYYY
+
+  -- years
+  -- months
+  -- days -->
+
+    <div class="attribution">
+      Challenge by
+      <a
+        rel="noopener"
+        href="https://www.frontendmentor.io?ref=challenge"
+        target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </div>
+  </body>
+</html>

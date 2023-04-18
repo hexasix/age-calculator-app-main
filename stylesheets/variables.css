@@ -1,0 +1,18 @@
+:root {
+  /*
+    colors 
+  */
+
+  /* primary */
+  --primary-color-purple: 259, 100%, 65%;
+  --primary-color-light-red: 0, 100%, 67%;
+  /* neutral */
+  --neutral-color-white: 0, 0%, 100%;
+  --neutral-color-off-white: 0, 0%, 94%;
+  --neutral-color-light-grey: 0, 0%, 86%;
+  --neutral-color-smokey-grey: 0, 0%, 44%;
+  --neutral-color-off-black: 0, 0%, 8%;
+  /* typography */
+  --font-size-input: 32px;
+
+}

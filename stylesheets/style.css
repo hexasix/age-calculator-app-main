@@ -1,0 +1,131 @@
+@import url("./style-font.css");
+/* @import url("./variables.css"); */
+:root {
+  /*
+    colors 
+  */
+
+  /* primary */
+  --primary-color-purple: 259, 100%, 65%;
+  --primary-color-light-red: 0, 100%, 67%;
+  /* neutral */
+  --neutral-color-white: 0, 0%, 100%;
+  --neutral-color-off-white: 0, 0%, 94%;
+  --neutral-color-light-grey: 0, 0%, 86%;
+  --neutral-color-smokey-grey: 0, 0%, 44%;
+  --neutral-color-off-black: 0, 0%, 8%;
+  /* typography */
+  --font-size-input: 32px;
+
+}
+:root{
+    font-size:32px;
+    font-family: "poppins";
+    font-style: normal;
+    font-weight: 400;
+}
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    border-color: black;
+    
+}
+body{
+    display: grid;
+    grid-template-rows: 1fr 11px;
+    place-items: center;
+    min-height: calc(100vh - 13px);
+    background-color: hsl(var(--neutral-color-off-white));
+}
+main .wrapper{
+    /* background-color: red; */
+    /* height: 50px; */
+    --wrapper-padding:1.7rem;
+    position: relative;
+    width: 37rem;
+    padding:var(--wrapper-padding);
+    background-color: hsl(var(--neutral-color-white));
+    border-radius: 1rem 1rem 10rem 1rem ;
+}
+/* the box that contains all the input boxes */
+main .wrapper   .inputs{
+    display: flex;
+    gap: 2rem;
+    border-block-end:1px solid hsla(var(--neutral-color-smokey-grey),.5) ;
+    padding-block-end: 2rem;
+}
+
+/* if flex-basis is set to be smaller than 
+    div's auto width sizing then it is not 
+    going to work
+*/
+    
+main .wrapper div div:has(input){
+    display: flex;
+    flex-direction: column;
+    gap:0.7rem;
+    width: 20%;
+}
+
+/* input box label */
+main .wrapper .inputs label{
+    font-size: 0.7rem;
+    font-weight: 700;
+}
+/* input box */
+main .wrapper .inputs input{
+    height:calc(2rem * 1.5) ;
+    border-radius: 0.3rem;
+    /* inset by default */
+    border-style: solid;
+    padding-left: 1rem;
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+/* warning Texts */
+
+/* empty */
+main .wrapper div:has(input) .empty-warning-text{
+    font-size: 0.6rem;
+    font-weight: 400;
+    font-style: italic;
+    color:hsl(var(--primary-color-light-red));
+    display: none;
+}
+
+/* invalid */
+main .wrapper div:has(input) .invalid-warning-text{
+    font-size: 0.6rem;
+    font-weight: 400;
+    font-style: italic;
+    color:hsl(var(--primary-color-light-red));
+    display: none;
+}
+/* the circle button  */
+main .button{
+    --diameter:4.5rem;
+    position: absolute;
+    top:6.5rem;
+    right:var(--wrapper-padding);
+    height: var(--diameter);
+    width: var(--diameter);
+    border-radius: 50%;
+    background-color: hsl(var(--primary-color-purple));
+}
+
+main .button:has(:hover){
+    background-color: hsl(var(--neutral-color-off-black));
+    cursor: pointer;
+}
+/* the result display */
+
+/* typography */
+main .display :is(.year,.month,.day){
+    font-size: 4rem;
+    font-style: italic;
+    font-weight: 800;
+}
+main .display :is(.year,.month,.day) span.number{
+    color:hsl(var(--primary-color-purple));
+}
